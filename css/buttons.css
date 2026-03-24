@@ -152,11 +152,23 @@
   background: #ffffff;
   border-radius: 8px;
   border: 2px solid rgba(36,189,216,0.5);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   box-shadow: var(--s7-glow-cyan);
   flex-shrink: 0;
+}
+/* Hide entire QR wrapper on mobile; show only on landscape desktop */
+.s7-qr-wrap {
+  display: none;
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .s7-qr-wrap {
+    display: block;
+  }
+  .s7-qr {
+    display: flex;
+  }
 }
 .s7-qr svg {
   width: 68px;
