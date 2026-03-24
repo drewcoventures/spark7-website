@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>Tips — Spark7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<canvas class="neuron-canvas" data-neuron-canvas data-node-count="55" data-pulse-color="#7d4dad" data-node-color="#7d4dad" data-edge-color="rgba(125,77,173," style="position:fixed;inset:0;width:100%;height:100%;z-index:0;"></canvas>
+<div id="s7-nav-placeholder"></div>
+<div class="page-wrapper">
+
+  <div class="s7-page-hero">
+    <p class="s7-page-hero__eyebrow">Level Up</p>
+    <h1 class="s7-page-hero__title">Pro <span class="accent">Tips</span></h1>
+    <p class="s7-page-hero__sub">Expert strategies from top-ranked players to supercharge your Spark7 score.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="s7-grid s7-grid--3">
+        <div class="s7-card reveal" data-delay="0">
+          <span class="s7-card__icon">🎯</span>
+          <p class="s7-card__title">Start from the Edges</p>
+          <p class="s7-card__body">Peripheral nodes have fewer connection options — lock them in first before tackling the dense central cluster.</p>
+        </div>
+        <div class="s7-card reveal" data-delay="80">
+          <span class="s7-card__icon">⏱️</span>
+          <p class="s7-card__title">Watch the Decay Rate</p>
+          <p class="s7-card__body">Charge decays differently in each mode. In Speed Mode, decay is 3x faster — prioritize high-charge nodes first.</p>
+        </div>
+        <div class="s7-card reveal" data-delay="160">
+          <span class="s7-card__icon">🔗</span>
+          <p class="s7-card__title">Chain Micro-Sparks</p>
+          <p class="s7-card__body">Three small Spark Events in rapid succession count as a Mega Spark and award 5x points.</p>
+        </div>
+        <div class="s7-card reveal" data-delay="240">
+          <span class="s7-card__icon">💡</span>
+          <p class="s7-card__title">Save the Surge</p>
+          <p class="s7-card__body">Never use a Surge Conduit before round 5. The multiplier is applied to your current score — make it count.</p>
+        </div>
+        <div class="s7-card reveal" data-delay="320">
+          <span class="s7-card__icon">🧩</span>
+          <p class="s7-card__title">Play Daily</p>
+          <p class="s7-card__body">Daily challenge puzzles award exclusive cosmetics. Completing 7 in a row unlocks the legendary Spark7 border.</p>
+        </div>
+        <div class="s7-card reveal" data-delay="400">
+          <span class="s7-card__icon">🤝</span>
+          <p class="s7-card__title">Co-Op Mode</p>
+          <p class="s7-card__body">Pair with a friend — one player controls charge injection while the other manages routing. Coordination is everything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<div id="s7-footer-placeholder"></div>
+<script type="module">
+  import { autoInitNeuronCanvases } from './js/neuron-canvas.js';
+  import { initNav }                from './js/nav.js';
+  import { initScrollReveal }       from './js/scroll-reveal.js';
+  import { injectPartials }         from './js/partials.js';
+  injectPartials(); initNav(); autoInitNeuronCanvases(); initScrollReveal();
+</script>
+</body>
+</html>

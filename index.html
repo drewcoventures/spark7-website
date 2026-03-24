@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>Spark7 | Addicting chain reaction game: #1 Drop7 alternative</title>
+  <meta name="description" content="Spark7 is the electrifying brain-building puzzle app that challenges your mind and grows your neural connections.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/hero.css">
+
+  <style>
+    /* ── Page-level overrides and extras ── */
+    body { background: var(--s7-bg-deep); }
+
+    /* Hero canvas fills full viewport */
+    .hero-canvas-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    /* Subtle radial vignette so center stays dark */
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse 70% 60% at 50% 45%,
+        rgba(3,6,15,0.0)  0%,
+        rgba(3,6,15,0.55) 60%,
+        rgba(3,6,15,0.9)  100%
+      );
+      pointer-events: none;
+    }
+
+    /* ── Section: CTA strip ── */
+    .cta-strip {
+      position: relative;
+      z-index: 2;
+      padding: 36px 40px 100px;
+      text-align: center;
+    }
+    .cta-strip__label {
+      font-family: var(--font-heading);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .cta-strip__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    /* ── Scroll progress bar ── */
+    #scroll-bar {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--s7-cyan), var(--s7-primary));
+      width: 0%;
+      z-index: 2000;
+      transition: width 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div id="scroll-bar"></div>
+
+<!-- ── NAV ── -->
+<div id="s7-nav-placeholder"></div>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="s7-hero">
+
+  <!-- Neuron canvas -->
+  <div class="hero-canvas-wrap">
+    <canvas id="neuronCanvas" class="neuron-canvas" data-neuron-canvas></canvas>
+    <div class="hero-vignette"></div>
+  </div>
+
+  <!-- Logo -->
+  <img
+    src="assets/spark7_logo.png"
+    alt="Spark7 — Brain-Building Puzzle App"
+    class="s7-hero__logo reveal"
+    data-delay="100"
+  >
+
+  <!-- Tagline -->
+  <p class="s7-hero__tagline reveal" data-delay="250">
+    Your new favorite <span class="accent">brain-building</span> puzzle app
+  </p>
+
+  <!-- Store row -->
+  <div class="s7-hero__store-row reveal" data-delay="380">
+
+    <!-- App Store -->
+    <a href="#" class="s7-store-badge" aria-label="Download on the App Store">
+      <img src="assets/app-store-badge.svg" alt="Download on the App Store" height="88">
+    </a>
+
+    <!-- Google Play -->
+    <a href="#" class="s7-store-badge" aria-label="Get it on Google Play">
+      <img src="assets/google-play-badge.svg" alt="Get it on Google Play" height="88">
+    </a>
+
+    <!-- QR Code -->
+    <div>
+      <div class="s7-qr" aria-label="QR code to download Spark7">
+        <!-- Replace SVG below with a real QR code at launch -->
+        <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2"  y="2"  width="26" height="26" rx="2" stroke="#111" stroke-width="3" fill="none"/>
+          <rect x="9"  y="9"  width="12" height="12" fill="#111"/>
+          <rect x="40" y="2"  width="26" height="26" rx="2" stroke="#111" stroke-width="3" fill="none"/>
+          <rect x="47" y="9"  width="12" height="12" fill="#111"/>
+          <rect x="2"  y="40" width="26" height="26" rx="2" stroke="#111" stroke-width="3" fill="none"/>
+          <rect x="9"  y="47" width="12" height="12" fill="#111"/>
+          <rect x="40" y="40" width="4" height="4" fill="#111"/>
+          <rect x="48" y="40" width="4" height="4" fill="#111"/>
+          <rect x="56" y="40" width="8" height="4" fill="#111"/>
+          <rect x="40" y="48" width="8" height="4" fill="#111"/>
+          <rect x="52" y="48" width="4" height="4" fill="#111"/>
+          <rect x="40" y="56" width="4" height="8" fill="#111"/>
+          <rect x="48" y="56" width="8" height="4" fill="#111"/>
+          <rect x="60" y="56" width="4" height="8" fill="#111"/>
+        </svg>
+      </div>
+
+    </div>
+  </div><!-- /store-row -->
+
+  <!-- YouTube video -->
+  <div class="s7-hero__video-wrap reveal" data-delay="480">
+    <div class="s7-hero__video-frame">
+      <!--
+        TO EMBED A REAL YOUTUBE VIDEO:
+        Replace the placeholder below with:
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1"
+          title="Spark7 — Game Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      -->
+      <div class="s7-hero__video-placeholder">
+        <div class="s7-hero__play-btn" role="img" aria-label="Video placeholder">▶</div>
+        <span>Game Trailer &mdash; YouTube Embed</span>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /hero -->
+
+<!-- ════════════════════════════════════════
+     CTA QUICK-LINK STRIP
+════════════════════════════════════════ -->
+<div class="cta-strip">
+  <p class="cta-strip__label">Explore Spark7</p>
+  <div class="cta-strip__grid">
+    <a href="how-to-play.html"    class="s7-btn s7-btn--primary  reveal" data-delay="0">How to Play</a>
+    <a href="about.html"          class="s7-btn s7-btn--red       reveal" data-delay="60">About</a>
+    <a href="tips.html"           class="s7-btn s7-btn--purple    reveal" data-delay="120">Tips</a>
+    <a href="brain-benefits.html" class="s7-btn s7-btn--green     reveal" data-delay="180">Brain Benefits</a>
+    <a href="contact.html"        class="s7-btn s7-btn--rose      reveal" data-delay="240">Contact</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<div id="s7-footer-placeholder"></div>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script type="module">
+  import { autoInitNeuronCanvases } from './js/neuron-canvas.js';
+  import { initNav }                from './js/nav.js';
+  import { initScrollReveal }       from './js/scroll-reveal.js';
+  import { injectPartials }         from './js/partials.js';
+
+  // 1. Inject shared nav + footer
+  injectPartials();
+
+  // 2. Init nav interactivity (runs after inject)
+  initNav();
+
+  // 3. Neuron canvas
+  autoInitNeuronCanvases();
+
+  // 4. Scroll reveals
+  initScrollReveal();
+
+  // 5. Scroll progress bar
+  const scrollBar = document.getElementById('scroll-bar');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    scrollBar.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* ═══════════════════════════════════════════════════════════
+   SPARK7 – BUTTON COMPONENTS
+   buttons.css
+═══════════════════════════════════════════════════════════ */
+
+@import './tokens.css';
+
+/* ── Base button ── */
+.s7-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.s7-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+.s7-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Primary gradient variants ── */
+.s7-btn--primary {
+  background: linear-gradient(135deg, var(--s7-primary), var(--s7-cyan));
+  color: #fff;
+}
+.s7-btn--primary:hover {
+  box-shadow: 0 8px 28px rgba(36,189,216,0.4);
+}
+
+.s7-btn--red {
+  background: linear-gradient(135deg, var(--s7-red), var(--s7-rose));
+  color: #fff;
+}
+.s7-btn--red:hover {
+  box-shadow: 0 8px 28px rgba(255,0,0,0.4);
+}
+
+.s7-btn--purple {
+  background: linear-gradient(135deg, var(--s7-purple), var(--s7-primary));
+  color: #fff;
+}
+.s7-btn--purple:hover {
+  box-shadow: 0 8px 28px rgba(125,77,173,0.4);
+}
+
+.s7-btn--green {
+  background: linear-gradient(135deg, var(--s7-green), var(--s7-cyan));
+  color: #fff;
+}
+.s7-btn--green:hover {
+  box-shadow: 0 8px 28px rgba(107,200,65,0.4);
+}
+
+.s7-btn--rose {
+  background: linear-gradient(135deg, var(--s7-rose), var(--s7-purple));
+  color: #fff;
+}
+.s7-btn--rose:hover {
+  box-shadow: 0 8px 28px rgba(181,45,87,0.4);
+}
+
+/* ── Ghost / outline variant ── */
+.s7-btn--ghost {
+  background: transparent;
+  border: var(--s7-border-bright);
+  color: var(--s7-cyan);
+}
+.s7-btn--ghost:hover {
+  background: rgba(36,189,216,0.1);
+  box-shadow: var(--s7-glow-cyan);
+}
+
+/* ── Store buttons (slightly larger) ── */
+.s7-btn--store {
+  padding: 13px 24px;
+  background: var(--s7-bg-surface);
+  border: var(--s7-border-bright);
+  color: #fff;
+  border-radius: 8px;
+}
+.s7-btn--store:hover {
+  background: rgba(36,189,216,0.14);
+  border-color: var(--s7-cyan);
+  box-shadow: var(--s7-glow-cyan);
+}
+.s7-btn--store .store-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+.s7-btn--store .store-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.s7-btn--store .store-text small {
+  font-size: 9px;
+  opacity: 0.6;
+  letter-spacing: 0.12em;
+}
+.s7-btn--store .store-text strong {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* ── CTA nav button row ── */
+.s7-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* ── Store badge images ── */
+.s7-store-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  transition: transform var(--transition), filter var(--transition);
+  border-radius: 10px;
+}
+.s7-store-badge img {
+  display: block;
+  height: 88px;
+  width: auto;
+  border-radius: 10px;
+}
+.s7-store-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: drop-shadow(0 0 12px rgba(36,189,216,0.4));
+}
+.s7-store-badge:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── QR code block ── */
+.s7-qr {
+  width: 88px;
+  height: 88px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 2px solid rgba(36,189,216,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--s7-glow-cyan);
+  flex-shrink: 0;
+}
+.s7-qr svg {
+  width: 68px;
+  height: 68px;
+}

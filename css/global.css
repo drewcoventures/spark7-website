@@ -1,0 +1,136 @@
+/* ═══════════════════════════════════════════════════════════
+   SPARK7 – GLOBAL BASE STYLES
+   global.css
+   Reset, base typography, shared utility classes.
+═══════════════════════════════════════════════════════════ */
+
+@import './tokens.css';
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--s7-bg-deep);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ── Typography helpers ── */
+.font-heading { font-family: var(--font-heading); }
+.font-body    { font-family: var(--font-body); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;          /* Audiowide has no bold variant — weight 400 is correct */
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+}
+
+/* ── Color utilities ── */
+.text-cyan   { color: var(--s7-cyan); }
+.text-red    { color: var(--s7-red); }
+.text-purple { color: var(--s7-purple); }
+.text-green  { color: var(--s7-green); }
+.text-rose   { color: var(--s7-rose); }
+.text-muted  { color: rgba(255,255,255,0.55); }
+
+/* ── Layout helpers ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Section padding ── */
+.section {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--space-xl);
+}
+
+/* ── Neuron canvas (shared) ── */
+.neuron-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: var(--s7-bg-surface);
+  border: var(--s7-border);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Divider line ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(36,189,216,0.4) 20%,
+    rgba(36,189,216,0.4) 80%,
+    transparent
+  );
+  margin-block: var(--space-xl);
+}
+
+/* ── Scroll fade-in animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Page wrapper (offset for fixed nav) ── */
+.page-wrapper {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}

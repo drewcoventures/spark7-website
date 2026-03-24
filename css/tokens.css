@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════
+   SPARK7 – DESIGN TOKENS
+   tokens.css
+   Import this first in every page/component stylesheet.
+═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap');
+
+:root {
+  /* ── Brand Colors ── */
+  --s7-primary:    #1b489e;
+  --s7-red:        #ff0000;
+  --s7-cyan:       #24bdd8;
+  --s7-purple:     #7d4dad;
+  --s7-rose:       #b52d57;
+  --s7-green:      #6bc841;
+
+  /* ── Backgrounds ── */
+  --s7-bg-deep:    #03060f;
+  --s7-bg-mid:     #050c1a;
+  --s7-bg-surface: rgba(36, 189, 216, 0.06);
+  --s7-bg-glass:   rgba(3, 6, 15, 0.85);
+
+  /* ── Typography ── */
+  --font-heading:  'Audiowide', sans-serif;
+  --font-body:     'Michroma', sans-serif;
+
+  /* ── Borders ── */
+  --s7-border:         1px solid rgba(36, 189, 216, 0.22);
+  --s7-border-bright:  1px solid rgba(36, 189, 216, 0.55);
+
+  /* ── Glows ── */
+  --s7-glow-cyan:   0 0 24px rgba(36, 189, 216, 0.45);
+  --s7-glow-red:    0 0 24px rgba(255, 0, 0, 0.45);
+  --s7-glow-purple: 0 0 24px rgba(125, 77, 173, 0.45);
+
+  /* ── Spacing scale ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  32px;
+  --space-xl:  64px;
+  --space-2xl: 120px;
+
+  /* ── Nav ── */
+  --nav-height: 68px;
+
+  /* ── Transitions ── */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --transition:  0.25s var(--ease-out);
+}

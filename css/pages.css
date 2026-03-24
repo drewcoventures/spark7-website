@@ -1,0 +1,212 @@
+/* ═══════════════════════════════════════════════════════════
+   SPARK7 – INNER PAGE STYLES
+   pages.css
+   Used by: How to Play, About, Tips, Brain Benefits, Contact
+═══════════════════════════════════════════════════════════ */
+
+@import './tokens.css';
+
+/* ── Content dim overlay (fades neuron canvas below hero) ── */
+.page-wrapper .section {
+  position: relative;
+}
+.page-wrapper .section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 6, 15, 0.77);
+  z-index: -1;
+}
+
+/* ── Page hero banner ── */
+.s7-page-hero {
+  position: relative;
+  padding: 40px 40px 40px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: var(--s7-border);
+}
+.s7-page-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--s7-cyan);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+.s7-page-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 6vw, 72px);
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.s7-page-hero__title .accent { color: var(--s7-cyan); }
+.s7-page-hero__sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255,255,255,0.82);
+  max-width: 540px;
+  margin-inline: auto;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+/* ── Content grid ── */
+.s7-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+.s7-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.s7-grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) {
+  .s7-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .s7-grid--2,
+  .s7-grid--3 { grid-template-columns: 1fr; }
+}
+
+/* ── Feature card ── */
+.s7-card {
+  background: var(--s7-bg-surface);
+  border: var(--s7-border);
+  border-radius: 12px;
+  padding: 20px 28px 28px;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.s7-card:hover {
+  border-color: rgba(36,189,216,0.5);
+  box-shadow: var(--s7-glow-cyan);
+  transform: translateY(-4px);
+}
+.s7-card__icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+  display: block;
+  line-height: 1;
+}
+.s7-card__title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--s7-cyan);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.s7-card__body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+
+/* ── Numbered step list ── */
+.s7-steps {
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.s7-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  counter-increment: step;
+}
+.s7-step__num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--s7-primary), var(--s7-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: #fff;
+}
+.s7-step__num::before { content: counter(step, decimal-leading-zero); }
+.s7-step__content {}
+.s7-step__title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.s7-step__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+}
+
+/* ── Contact form ── */
+.s7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 560px;
+  margin-inline: auto;
+}
+.s7-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.s7-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+.s7-input,
+.s7-textarea {
+  background: var(--s7-bg-surface);
+  border: var(--s7-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+.s7-input:focus,
+.s7-textarea:focus {
+  border-color: var(--s7-cyan);
+  box-shadow: var(--s7-glow-cyan);
+}
+.s7-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ── Stat callout ── */
+.s7-stat {
+  text-align: center;
+  padding: 32px 16px;
+}
+.s7-stat__num {
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 5vw, 64px);
+  color: var(--s7-cyan);
+  display: block;
+  letter-spacing: 0.06em;
+}
+.s7-stat__label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-top: 8px;
+}
