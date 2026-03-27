@@ -2,7 +2,7 @@
   <rect width="200" height="67" rx="10" fill="#000"/>
   <rect x="1" y="1" width="198" height="65" rx="9" fill="none" stroke="#a6a6a6" stroke-width="1.2"/>
   <!-- Google Play triangle -->
-  <g transform="translate(18, 20) scale(0.65)">
+  <g transform="translate(18, 18) scale(0.75)">
     <!-- Blue -->
     <path d="M3 2.5L21.5 19.5 3 36.5V2.5z" fill="#4285F4"/>
     <!-- Green -->
@@ -13,6 +13,6 @@
     <path d="M3 36.5L21.5 19.5 30 25 8.5 39 3 36.5z" fill="#DB4437"/>
   </g>
   <!-- Text -->
-  <text x="48" y="24" fill="#fff" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing="1.5" text-transform="uppercase">GET IT ON</text>
-  <text x="48" y="46" fill="#fff" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="-0.2">Google Play</text>
+  <text x="53" y="24" fill="#fff" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing="1.5" text-transform="uppercase">GET IT ON</text>
+  <text x="53" y="46" fill="#fff" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="-0.2">Google Play</text>
 </svg>
