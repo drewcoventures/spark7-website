@@ -19,15 +19,15 @@
 
 /* ── Logo ── */
 .s7-hero__logo {
-  width: 460px;
+  width: 374px;
   max-width: 88vw;
   position: relative;
   z-index: 2;
   animation: heroFloat 4.5s ease-in-out infinite;
   filter: drop-shadow(0 0 32px rgba(36,189,216,0.5));
   transition: filter 0.4s ease;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 10px;
 }
 .s7-hero__logo:hover {
   filter: drop-shadow(0 0 52px rgba(36,189,216,0.85));
@@ -161,7 +161,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .s7-hero__logo { width: 320px; }
+  .s7-hero__logo { width: 264px; }
   .s7-hero__tagline { font-size: 14px; }
   .s7-hero__video-wrap { margin-top: 48px; }
 }
