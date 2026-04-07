@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>Spark7 Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <style>
+    /* ── Privacy page content styles ── */
+    .privacy-section {
+      max-width: 760px;
+      margin-inline: auto;
+      padding: 0 24px;
+    }
+
+    .privacy-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      padding: 22px 28px;
+      margin-bottom: 40px;
+      background: var(--s7-bg-surface);
+      border: var(--s7-border);
+      border-radius: 12px;
+    }
+    .privacy-meta__item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+    }
+    .privacy-meta__label {
+      font-family: var(--font-body);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+    }
+    .privacy-meta__value {
+      font-family: var(--font-body);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .privacy-h2 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      letter-spacing: 0.14em;
+      color: var(--s7-cyan);
+      text-transform: uppercase;
+      margin: 56px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: var(--s7-border);
+    }
+    .privacy-h2:first-of-type { margin-top: 0; }
+
+    .privacy-text {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      line-height: 2;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+    .privacy-text strong {
+      color: #fff;
+      font-weight: normal;
+      border-bottom: 1px solid rgba(36,189,216,0.45);
+      padding-bottom: 1px;
+    }
+    .privacy-text a {
+      color: var(--s7-cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color var(--transition);
+    }
+    .privacy-text a:hover { color: #fff; }
+    .privacy-text code {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--s7-cyan);
+      background: rgba(36,189,216,0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .privacy-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+    .privacy-list li {
+      position: relative;
+      padding-left: 22px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      line-height: 2;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+    }
+    .privacy-list li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      background: var(--s7-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(36,189,216,0.55);
+    }
+    .privacy-list li code {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--s7-cyan);
+      background: rgba(36,189,216,0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .privacy-list li a {
+      color: var(--s7-cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── Data table ── */
+    .privacy-table-wrap {
+      overflow-x: auto;
+      margin: 8px 0 24px;
+      border: var(--s7-border);
+      border-radius: 12px;
+      background: var(--s7-bg-surface);
+    }
+    .privacy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-body);
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      min-width: 640px;
+    }
+    .privacy-table thead th {
+      font-family: var(--font-heading);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--s7-cyan);
+      text-align: left;
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(36,189,216,0.32);
+      background: rgba(36,189,216,0.05);
+    }
+    .privacy-table tbody td {
+      padding: 18px;
+      vertical-align: top;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.85;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .privacy-table tbody tr:last-child td { border-bottom: none; }
+    .privacy-table tbody td:first-child {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-transform: uppercase;
+      width: 22%;
+      white-space: nowrap;
+    }
+    .privacy-table tbody td code {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--s7-cyan);
+      background: rgba(36,189,216,0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .privacy-meta { gap: 18px; padding: 18px 20px; }
+      .privacy-h2   { font-size: 14px; margin-top: 44px; }
+      .privacy-text, .privacy-list li { font-size: 12.5px; }
+    }
+  </style>
+</head>
+<body>
+<canvas class="neuron-canvas" data-neuron-canvas
+  data-node-color="#24bdd8"
+  data-edge-color="rgba(36,189,216,"
+  data-pulse-color="#1b489e"
+  data-node-count="50" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;"></canvas>
+<div id="s7-nav-placeholder"></div>
+
+<div class="page-wrapper">
+
+  <!-- Page hero -->
+  <div class="s7-page-hero">
+    <p class="s7-page-hero__eyebrow">Legal</p>
+    <h1 class="s7-page-hero__title">Privacy <span class="accent">Policy</span></h1>
+    <p class="s7-page-hero__sub">
+      Exactly what Spark7 collects, why, who it&rsquo;s shared with, and how to ask us to delete it.
+    </p>
+  </div>
+
+  <!-- Content -->
+  <section class="section" style="padding-top:48px;padding-bottom:24px;">
+    <div class="privacy-section">
+
+      <!-- Meta strip: effective date, publisher, contact -->
+      <div class="privacy-meta reveal">
+        <div class="privacy-meta__item">
+          <span class="privacy-meta__label">Effective</span>
+          <span class="privacy-meta__value">2026-04-06</span>
+        </div>
+        <div class="privacy-meta__item">
+          <span class="privacy-meta__label">Publisher</span>
+          <span class="privacy-meta__value">Andrew Cohen</span>
+        </div>
+        <div class="privacy-meta__item">
+          <span class="privacy-meta__label">Contact</span>
+          <span class="privacy-meta__value"><a href="mailto:drewcoventures@gmail.com" style="color:var(--s7-cyan);text-decoration:underline;">drewcoventures@gmail.com</a></span>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <h2 class="privacy-h2 reveal">Summary</h2>
+      <p class="privacy-text reveal">
+        Spark7 is a mobile puzzle game. We collect the minimum amount of data needed to run online leaderboards, deliver non-personalized ads, process in-app purchases, and diagnose crashes. <strong>We do not track you across other apps or websites, we do not personalize ads, and we do not sell your data.</strong> This page explains exactly what is collected, why, who it is shared with, how long it is kept, and how to ask us to delete it.
+      </p>
+
+      <!-- Data we collect -->
+      <h2 class="privacy-h2 reveal">Data we collect</h2>
+      <p class="privacy-text reveal">
+        Spark7 collects the five categories of data listed below. All five are linked to your in-game identity (a random UUID created on your device). None of them are used for tracking.
+      </p>
+
+      <div class="privacy-table-wrap reveal">
+        <table class="privacy-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>What it actually is in Spark7</th>
+              <th>Why we collect it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>User ID</td>
+              <td>A random UUID (<code>player_id</code>) generated on your device the first time you launch Spark7. It is not a platform account ID, email, or hardware device identifier.</td>
+              <td>App Functionality &mdash; to attribute your scores to a single player across sessions. Analytics &mdash; to count distinct players.</td>
+            </tr>
+            <tr>
+              <td>Other User Content</td>
+              <td>The display name you choose for the leaderboard.</td>
+              <td>App Functionality &mdash; so other players can see who set a score.</td>
+            </tr>
+            <tr>
+              <td>Coarse Location</td>
+              <td>A two-letter country code derived from your device&rsquo;s locale setting (e.g. <code>US</code>, <code>GB</code>). We do not collect GPS, IP-based geolocation, city, or any precise location.</td>
+              <td>App Functionality &mdash; to render a country flag next to your leaderboard entry.</td>
+            </tr>
+            <tr>
+              <td>Product Interaction</td>
+              <td>Gameplay statistics: final score, level reached, turn count, game seed.</td>
+              <td>App Functionality &mdash; to populate per-game and global leaderboards. Analytics &mdash; to understand which game configurations players reach.</td>
+            </tr>
+            <tr>
+              <td>Crash Data</td>
+              <td>Operational error logs (error context, message, and a small amount of structured metadata) sent through our internal logging layer when something goes wrong.</td>
+              <td>Analytics &mdash; to diagnose and fix bugs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- What we do not collect -->
+      <h2 class="privacy-h2 reveal">What we do <em>not</em> collect</h2>
+      <p class="privacy-text reveal">
+        To be explicit, Spark7 does <strong>not</strong> collect any of the following:
+      </p>
+      <ul class="privacy-list reveal">
+        <li>Your real name, email address, phone number, or postal address</li>
+        <li>Precise location, GPS coordinates, IP address geolocation, or city</li>
+        <li>Contacts, calendar, photos, microphone, or camera data</li>
+        <li>Health, fitness, or financial information</li>
+        <li>Browsing or search history outside of Spark7</li>
+        <li>The Identifier for Advertisers (IDFA), Google Advertising ID, or any other identifier used for cross-app tracking</li>
+        <li>Payment card or banking details &mdash; all purchases are handled directly by Apple or Google and we never see your payment information</li>
+      </ul>
+
+      <!-- Third-party services -->
+      <h2 class="privacy-h2 reveal">Third-party services</h2>
+      <p class="privacy-text reveal">
+        Spark7 uses a small number of third-party services. Each only receives the data it needs to do its job.
+      </p>
+      <ul class="privacy-list reveal">
+        <li><strong>Supabase</strong> &mdash; our backend database and API host. Receives leaderboard records (display name, country code, <code>player_id</code>, score, gameplay statistics) and crash/error logs. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+        <li><strong>Google Mobile Ads (AdMob)</strong> &mdash; serves the banner and interstitial ads in Spark7. Spark7 requests <strong>non-personalized ads only</strong> (NPA mode), so AdMob is not used to build a profile of you across apps. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google&rsquo;s partner-sites policy</a></li>
+        <li><strong>Apple StoreKit</strong> (iOS only) &mdash; processes in-app purchases such as Remove Ads and replay packs. Apple receives whatever is required to complete the transaction; we receive only a confirmation that the purchase succeeded and which product was bought. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
+        <li><strong>Google Play Billing</strong> (Android only) &mdash; same role as StoreKit for Android purchases. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        <li><strong>iOS / Android Share Sheet</strong> &mdash; when you tap &ldquo;Invite Friends,&rdquo; Spark7 hands a short message to your operating system&rsquo;s standard share sheet. Spark7 does not record who you share with or whether you share at all.</li>
+      </ul>
+
+      <!-- Retention -->
+      <h2 class="privacy-h2 reveal">Retention</h2>
+      <ul class="privacy-list reveal">
+        <li><strong>Leaderboard records</strong> (display name, country code, <code>player_id</code>, score, gameplay statistics) are kept for as long as Spark7 operates online leaderboards, so historical scores remain meaningful. They are deleted when you submit a deletion request (see below).</li>
+        <li><strong>Crash and error logs</strong> are kept for up to <strong>90 days</strong> for diagnostic purposes and then purged.</li>
+        <li><strong>Local data on your device</strong> (<code>save_data.json</code>, <code>pending_scores.json</code>) lives only on your device and is removed when you uninstall Spark7 or clear its app data.</li>
+      </ul>
+
+      <!-- Your rights -->
+      <h2 class="privacy-h2 reveal">Your rights and how to delete your data</h2>
+      <p class="privacy-text reveal">You can ask us at any time to:</p>
+      <ul class="privacy-list reveal">
+        <li>Tell you what data is associated with your <code>player_id</code> or display name</li>
+        <li>Correct your display name</li>
+        <li>Delete your leaderboard records and any associated stored data</li>
+      </ul>
+      <p class="privacy-text reveal">
+        To make any of these requests, email <strong><a href="mailto:drewcoventures@gmail.com?subject=Spark7%20deletion%20request">drewcoventures@gmail.com</a></strong> with the subject <strong>&ldquo;Spark7 deletion request&rdquo;</strong> and include either your in-game display name or your <code>player_id</code>. We will respond within 30 days.
+      </p>
+      <p class="privacy-text reveal">
+        Depending on where you live, you may have additional rights under laws such as the EU/UK GDPR or the California Consumer Privacy Act, including the right to access, correct, delete, or object to processing of your personal data, and the right to lodge a complaint with your local data protection authority. The email address above is the right place to start for any of those requests.
+      </p>
+
+      <!-- Children -->
+      <h2 class="privacy-h2 reveal">Children</h2>
+      <p class="privacy-text reveal">
+        Spark7 is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you believe a child has submitted data to Spark7, please contact us at the email address above and we will delete it.
+      </p>
+
+      <!-- Security -->
+      <h2 class="privacy-h2 reveal">Security</h2>
+      <p class="privacy-text reveal">
+        Data sent between Spark7 and our backend, AdMob, and the App Store / Play Store is transmitted over HTTPS using each platform&rsquo;s standard networking libraries. Spark7 does not implement any custom or proprietary cryptography. No method of transmission or storage is 100% secure, but we keep the surface area small by collecting as little as possible.
+      </p>
+
+      <!-- Changes -->
+      <h2 class="privacy-h2 reveal">Changes to this policy</h2>
+      <p class="privacy-text reveal">
+        We may update this policy from time to time. When we do, the <strong>Effective</strong> date at the top of this page will change. Material changes will also be surfaced inside the Spark7 app where appropriate.
+      </p>
+
+      <!-- Contact -->
+      <h2 class="privacy-h2 reveal">Contact</h2>
+      <p class="privacy-text reveal">
+        Andrew Cohen<br>
+        <a href="mailto:drewcoventures@gmail.com">drewcoventures@gmail.com</a>
+      </p>
+
+    </div>
+  </section>
+
+  <div style="padding:36px 40px 100px;text-align:center;">
+    <p style="font-family:var(--font-heading);font-size:10px;letter-spacing:0.3em;color:rgba(255,255,255,0.28);text-transform:uppercase;margin-bottom:28px;">Explore Spark7</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:860px;margin-inline:auto;">
+      <a href="how-to-play.html"    class="s7-btn s7-btn--primary reveal" data-delay="0">How to Play</a>
+      <a href="about.html"          class="s7-btn s7-btn--purple  reveal" data-delay="60">About</a>
+      <a href="brain-benefits.html" class="s7-btn s7-btn--green   reveal" data-delay="120">Brain Benefits</a>
+      <a href="contact.html"        class="s7-btn s7-btn--rose    reveal" data-delay="180">Contact</a>
+    </div>
+  </div>
+
+</div>
+
+<div id="s7-footer-placeholder"></div>
+
+<script type="module">
+  import { autoInitNeuronCanvases } from './js/neuron-canvas.js';
+  import { initNav }                from './js/nav.js';
+  import { initScrollReveal }       from './js/scroll-reveal.js';
+  import { injectPartials }         from './js/partials.js';
+  injectPartials();
+  initNav();
+  autoInitNeuronCanvases();
+  initScrollReveal();
+</script>
+</body>
+</html>
