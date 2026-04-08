@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <title>Tips — Spark7</title>
+  <title>Spark7 Pro Tips — Strategy guide for the top Drop7 alternative</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
@@ -13,6 +13,114 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/pages.css">
+
+  <style>
+    /* ── Tips page content styles ── */
+    .tips-section {
+      max-width: 780px;
+      margin-inline: auto;
+      padding: 0 24px;
+    }
+
+    .tip {
+      margin-bottom: 56px;
+      overflow: hidden; /* contain floats inside the article */
+    }
+    .tip + .tip {
+      padding-top: 48px;
+      border-top: 1px solid rgba(125, 77, 173, 0.25);
+    }
+
+    .tip__title {
+      font-family: var(--font-heading);
+      color: var(--s7-cyan);
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      margin: 0 0 18px 0;
+      letter-spacing: 0.02em;
+    }
+
+    .tips-text {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+    }
+    .tips-text + .tips-text { margin-top: 16px; }
+    .tips-text em { color: rgba(255, 255, 255, 0.96); font-style: italic; }
+
+    /* Wide images: centered, capped width so they don't dominate the page */
+    .tip__img--wide {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 24px auto;
+      clear: both;            /* always sit below any preceding float */
+      border-radius: 14px;
+      border: 2px solid rgba(125, 77, 173, 0.45);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Narrow images: floated, with text wrapping naturally around them */
+    .tip__img--float-left,
+    .tip__img--float-right {
+      width: 240px;
+      max-width: 42vw;
+      height: auto;
+      border-radius: 14px;
+      border: 2px solid rgba(125, 77, 173, 0.45);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    .tip__img--float-left {
+      float: left;
+      margin: 4px 24px 12px 0;
+    }
+    .tip__img--float-right {
+      float: right;
+      margin: 4px 0 12px 24px;
+    }
+
+    /* The Venmo joke — Andrew's personal lede */
+    .tips-lede {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.82);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px auto;
+      padding: 18px 28px;
+      line-height: 1.75;
+      border-left: 2px solid rgba(125, 77, 173, 0.6);
+      border-right: 2px solid rgba(125, 77, 173, 0.6);
+    }
+
+    /* Inline link styling (Brain Benefits cross-references) */
+    .tips-link {
+      color: var(--s7-cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color var(--transition);
+    }
+    .tips-link:hover { color: #6dd9ee; }
+
+    /* Mobile: drop the floats, let everything stack full-width */
+    @media (max-width: 600px) {
+      .tip__img--float-left,
+      .tip__img--float-right,
+      .tip__img--wide {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 18px 0;
+      }
+      .tip { margin-bottom: 40px; }
+      .tip + .tip { padding-top: 36px; }
+      .tips-lede { margin-bottom: 40px; }
+    }
+  </style>
 </head>
 <body>
 <canvas class="neuron-canvas" data-neuron-canvas data-node-count="55" data-pulse-color="#7d4dad" data-node-color="#7d4dad" data-edge-color="rgba(125,77,173," style="position:fixed;inset:0;width:100%;height:100%;z-index:0;"></canvas>
@@ -22,42 +130,157 @@
   <div class="s7-page-hero">
     <p class="s7-page-hero__eyebrow">Level Up</p>
     <h1 class="s7-page-hero__title">Pro <span class="accent">Tips</span></h1>
-    <p class="s7-page-hero__sub">Expert strategies from top-ranked players to supercharge your Spark7 score.</p>
+    <p class="s7-page-hero__sub">Expert strategies to supercharge your Spark7 score.</p>
   </div>
 
-  <section class="section">
+  <section class="section" style="padding-top:24px;">
+    <div class="tips-section">
+
+      
+
+      <!-- Tip 1: The Golden Rule -->
+      <article class="tip reveal">
+        <h2 class="tip__title">The Golden Rule</h2>
+        <p class="tips-text">
+          The most important thing to remember in Spark7 is to ensure that each
+          exploding disc is touching the maximum number of stones, and the
+          minimum number of other numbered discs.
+        </p>
+        <p class="tips-text">
+          In other words, think of your numbered discs as your <em>ammunition</em>,
+          and the stones as your <em>targets</em>. You should never "waste" any
+          ammo by having a disc explode without touching at least one stone.
+        </p>
+        <img class="tip__img--wide" src="assets/tip-golden-rule.png" alt="Spark7 example: an exploding disc damages adjacent gray stones">
+        <p class="tips-text">
+          Of course, there will be many times you'll need to violate this "rule",
+          as you weigh your move against the considerations in the other tips below.
+        </p>
+        <p class="tips-text">
+          Just remember that the highest scores will always come from the games
+          where the highest percentage of disc explosions result in a damaged
+          stone. It's simple math.
+        </p>
+      </article>
+
+      <!-- Tip 2: Avoid adjacent 1s -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Avoid adjacent 1s</h2>
+        <img class="tip__img--float-right" src="assets/tip-adjacent-1s-warning.png" alt="Spark7 example: two 1s sitting next to each other create a deadlock">
+        <p class="tips-text">
+          The quickest killer of any player is when several consecutive 1s end
+          up next to each other (or next to an unknown stone). The only way to
+          resolve this situation is to "dig out" from underneath the row of 1s,
+          which becomes exponentially more unlikely the longer your row of 1s.
+        </p>
+        <p class="tips-text">
+          If you ever have a situation where an existing 1 is at risk of falling
+          adjacent to another 1 or to a stone, do whatever you can to avoid that
+          from happening — even if it involves neglecting one of the other tips
+          on this page.
+        </p>
+        <img class="tip__img--wide" src="assets/tip-adjacent-1s-example.png" alt="Spark7 example: a cascading row of adjacent 1s killing a game">
+      </article>
+
+      <!-- Tip 3: Avoid orphan 4s & 5s -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Avoid orphan 4s &amp; 5s</h2>
+        <p class="tips-text">
+          Another common killer is when a 4 or a 5 ends up on a tall, narrow
+          column on which it has become too impractical to form a row four or
+          five discs wide (or to reduce the height to just four or five discs tall).
+        </p>
+        <p class="tips-text">
+          Over time, you should become adept at noticing that risk materializing
+          several moves before it happens, and take steps to prevent the
+          situation before it is too late.
+        </p>
+        <img class="tip__img--wide" src="assets/tip-orphan-4s.png" alt="Spark7 example: an orphaned 4 stranded on top of a tall narrow column">
+      </article>
+
+      <!-- Tip 4: Plan for big surges -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Plan for big "surges"</h2>
+        <img class="tip__img--float-left" src="assets/tip-surges.png" alt="Spark7 example: a long surge chain reaction triggered by careful disc stacking">
+        <p class="tips-text">
+          Remember that scoring in Spark7 is disproportionately impacted by very
+          long surges, not just by reaching higher levels. Building a huge surge
+          requires some careful planning (and sometimes a bit of luck as helpful
+          new stones are uncovered!).
+        </p>
+        <p class="tips-text">
+          Most successful surges start by planning your disc ordering
+          <em>horizontally</em>, in sequential order. This sometimes involves
+          <em>avoiding</em> letting certain discs explode too early while you
+          build your nice horizontal sequence.
+        </p>
+        <p class="tips-text">
+          Preparing to trigger a surge may also involve deliberately "stacking"
+          similar numbers on top of each other — and especially stacking
+          successively higher or lower numbers in the same vertical column —
+          until a rising level triggers the first of a chain of explosions.
+        </p>
+        <p class="tips-text">
+          You will almost certainly get better at creating long surges over time.
+          Planning long surges in Spark7 can vigorously exercise your working
+          memory and executive functioning skills.
+          [See other <a class="tips-link" href="brain-benefits.html">brain benefits of Spark7</a>.]
+        </p>
+      </article>
+
+      <!-- Tip 5: Sometimes the best move is no move -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Sometimes the best move is no move</h2>
+        <p class="tips-text">
+          It's often tempting to make a series of discs explode immediately, as
+          soon as a favorable disc loaded from the top presents the opportunity.
+        </p>
+        <p class="tips-text">
+          But remember that each time the level increases (every five discs),
+          the number of rows will be pushed up by one, and certain numbered
+          discs may <em>automatically</em> match their column height — without
+          you having had to drop a new disc to make that happen.
+        </p>
+        <img class="tip__img--wide" src="assets/tip-no-move.png" alt="Spark7 example: a level rise triggers a column-height match without requiring a player move">
+        <p class="tips-text">
+          Knowing when <em>not</em> to cause an explosion because a column is
+          already <em>naturally</em> "taken care of" is an important skill that
+          you will build over time.
+        </p>
+      </article>
+
+      <!-- Tip 6: Quickly adapt your strategy -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Quickly adapt your strategy</h2>
+        <p class="tips-text">
+          In a typical game of Spark7, you will often be planning toward a
+          perfectly epic surge, only to be suddenly stymied by a new urgent
+          situation — such as a group of adjacent 1s or an impending stale 4.
+          This may require you to quickly shift your thinking toward the new
+          priority and stop working toward your previous goal.
+        </p>
+        <p class="tips-text">
+          Don't be discouraged when this happens! Just forget about the sunk
+          cost and move on, or you might end up letting a new risk fester for
+          longer than you can afford to.
+        </p>
+        <p class="tips-text">
+          Playing Spark7 can be a true test of your resilience, grit, patience,
+          adaptability, and emotional regulation. Keep pushing yourself!
+          [See other <a class="tips-link" href="brain-benefits.html">brain benefits of Spark7</a>.]
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider container" style="margin-block:16px;"></div>
+
+  <section class="section" style="text-align:center;padding-top:16px;padding-bottom:32px;">
     <div class="container">
-      <div class="s7-grid s7-grid--3">
-        <div class="s7-card reveal" data-delay="0">
-          <span class="s7-card__icon">🎯</span>
-          <p class="s7-card__title">Start from the Edges</p>
-          <p class="s7-card__body">Peripheral nodes have fewer connection options — lock them in first before tackling the dense central cluster.</p>
-        </div>
-        <div class="s7-card reveal" data-delay="80">
-          <span class="s7-card__icon">⏱️</span>
-          <p class="s7-card__title">Watch the Decay Rate</p>
-          <p class="s7-card__body">Charge decays differently in each mode. In Speed Mode, decay is 3x faster — prioritize high-charge nodes first.</p>
-        </div>
-        <div class="s7-card reveal" data-delay="160">
-          <span class="s7-card__icon">🔗</span>
-          <p class="s7-card__title">Chain Micro-Sparks</p>
-          <p class="s7-card__body">Three small Spark Events in rapid succession count as a Mega Spark and award 5x points.</p>
-        </div>
-        <div class="s7-card reveal" data-delay="240">
-          <span class="s7-card__icon">💡</span>
-          <p class="s7-card__title">Save the Surge</p>
-          <p class="s7-card__body">Never use a Surge Conduit before round 5. The multiplier is applied to your current score — make it count.</p>
-        </div>
-        <div class="s7-card reveal" data-delay="320">
-          <span class="s7-card__icon">🧩</span>
-          <p class="s7-card__title">Play Daily</p>
-          <p class="s7-card__body">Daily challenge puzzles award exclusive cosmetics. Completing 7 in a row unlocks the legendary Spark7 border.</p>
-        </div>
-        <div class="s7-card reveal" data-delay="400">
-          <span class="s7-card__icon">🤝</span>
-          <p class="s7-card__title">Co-Op Mode</p>
-          <p class="s7-card__body">Pair with a friend — one player controls charge injection while the other manages routing. Coordination is everything.</p>
-        </div>
+      <p class="s7-page-hero__eyebrow reveal">Ready to Spark?</p>
+      <div class="s7-cta-row reveal" data-delay="100">
+        <a href="index.html" class="s7-btn s7-btn--primary">Download Now</a>
       </div>
     </div>
   </section>
