@@ -102,7 +102,22 @@ const FOOTER_CSS = `
 }
 `;
 
+function injectGA() {
+  if (document.getElementById('s7-ga')) return;
+  const id = 'G-L7FB7RTGCS';
+  const loader = document.createElement('script');
+  loader.id = 's7-ga';
+  loader.async = true;
+  loader.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  document.head.appendChild(loader);
+  const init = document.createElement('script');
+  init.textContent = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${id}');`;
+  document.head.appendChild(init);
+}
+
 export function injectPartials() {
+  injectGA();
+
   // Nav
   const navSlot = document.getElementById('s7-nav-placeholder');
   if (navSlot) navSlot.outerHTML = NAV_HTML;
