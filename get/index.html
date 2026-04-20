@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- GA4 — fires page_view for /get/ before redirect -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7FB7RTGCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7FB7RTGCS');
+  </script>
+  <title>Get Spark7</title>
+  <meta name="description" content="Download Spark7 for iOS or Android">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body>
+  <script>
+    (function() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+        window.location.replace('https://apps.apple.com/app/id6759691707');
+        return;
+      }
+
+      // Android detection
+      if (/android/i.test(ua)) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.drewcoventures.spark7');
+        return;
+      }
+
+      // Fallback: desktop or unknown — go to homepage
+      window.location.replace('/');
+    })();
+  </script>
+  <!-- No-JS fallback -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/">
+  </noscript>
+</body>
+</html>
