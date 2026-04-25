@@ -3,42 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- GA4 — fires page_view for /get/ before redirect -->
+  <!-- GA4 — page_view beacon must complete before redirect -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7FB7RTGCS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-L7FB7RTGCS');
+    gtag('config', 'G-L7FB7RTGCS', { send_page_view: false });
   </script>
   <title>Get Spark7</title>
   <meta name="description" content="Download Spark7 for iOS or Android">
   <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <!-- Fallback if redirect stalls -->
+  <meta http-equiv="refresh" content="3;url=/">
 </head>
 <body>
   <script>
     (function() {
       var ua = navigator.userAgent || navigator.vendor || window.opera;
-
-      // iOS detection
+      var dest;
       if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
-        window.location.replace('https://apps.apple.com/app/id6759691707');
-        return;
+        dest = 'https://apps.apple.com/app/id6759691707';
+      } else if (/android/i.test(ua)) {
+        dest = 'https://play.google.com/store/apps/details?id=com.drewcoventures.spark7';
+      } else {
+        dest = '/';
       }
-
-      // Android detection
-      if (/android/i.test(ua)) {
-        window.location.replace('https://play.google.com/store/apps/details?id=com.drewcoventures.spark7');
-        return;
+      var redirected = false;
+      function go() {
+        if (!redirected) { redirected = true; window.location.replace(dest); }
       }
-
-      // Fallback: desktop or unknown — go to homepage
-      window.location.replace('/');
+      gtag('event', 'page_view', {
+        page_location: window.location.href,
+        event_callback: go
+      });
+      setTimeout(go, 1500);
     })();
   </script>
-  <!-- No-JS fallback -->
   <noscript>
-    <meta http-equiv="refresh" content="0;url=/">
+    <meta http-equiv="refresh" content="3;url=/">
   </noscript>
 </body>
 </html>
