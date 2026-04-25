@@ -12,14 +12,14 @@
 
 const NAV_HTML = /* html */`
 <nav class="s7-nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="s7-nav__brand">SPARK7</a>
+  <a href="/" class="s7-nav__brand">SPARK7</a>
 
   <ul class="s7-nav__links">
-    <li><a href="how-to-play.html" class="s7-nav__link">How to Play</a></li>
-    <li><a href="about.html"       class="s7-nav__link">About</a></li>
-    <li><a href="tips.html"        class="s7-nav__link">Tips</a></li>
-    <li><a href="brain-benefits.html" class="s7-nav__link">Brain Benefits</a></li>
-    <li><a href="contact.html"     class="s7-nav__link">Contact</a></li>
+    <li><a href="/how-to-play" class="s7-nav__link">How to Play</a></li>
+    <li><a href="/about"       class="s7-nav__link">About</a></li>
+    <li><a href="/tips"        class="s7-nav__link">Tips</a></li>
+    <li><a href="/brain-benefits" class="s7-nav__link">Brain Benefits</a></li>
+    <li><a href="/contact"     class="s7-nav__link">Contact</a></li>
   </ul>
 
   <button class="s7-nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
@@ -31,11 +31,11 @@ const NAV_HTML = /* html */`
 
 <!-- Mobile drawer -->
 <div class="s7-nav__drawer" role="navigation" aria-label="Mobile navigation">
-  <a href="how-to-play.html"   class="s7-nav__link">How to Play</a>
-  <a href="about.html"         class="s7-nav__link">About</a>
-  <a href="tips.html"          class="s7-nav__link">Tips</a>
-  <a href="brain-benefits.html" class="s7-nav__link">Brain Benefits</a>
-  <a href="contact.html"       class="s7-nav__link">Contact</a>
+  <a href="/how-to-play"   class="s7-nav__link">How to Play</a>
+  <a href="/about"         class="s7-nav__link">About</a>
+  <a href="/tips"          class="s7-nav__link">Tips</a>
+  <a href="/brain-benefits" class="s7-nav__link">Brain Benefits</a>
+  <a href="/contact"       class="s7-nav__link">Contact</a>
 </div>
 `;
 
@@ -45,12 +45,12 @@ const FOOTER_HTML = /* html */`
     <div class="s7-footer__inner">
       <div class="s7-footer__brand">SPARK7</div>
       <ul class="s7-footer__links">
-        <li><a href="how-to-play.html">How to Play</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="tips.html">Tips</a></li>
-        <li><a href="brain-benefits.html">Brain Benefits</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/how-to-play">How to Play</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/tips">Tips</a></li>
+        <li><a href="/brain-benefits">Brain Benefits</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy</a></li>
       </ul>
       <p class="s7-footer__copy">&copy; 2025 Spark7. All rights reserved.</p>
     </div>

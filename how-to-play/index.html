@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
   <title>How to play Spark7, the top Drop7 alternative</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/buttons.css">
-  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="stylesheet" href="/css/pages.css">
 
   <style>
     /* ── How-to-play content styles ── */
@@ -119,7 +119,7 @@
 
       <!-- Column example: image left, text right -->
       <div class="htp-row img-left reveal">
-        <img src="assets/explode-4.png" alt="Column example — a 4 explodes when the column is 4 tall">
+        <img src="/assets/explode-4.png" alt="Column example — a 4 explodes when the column is 4 tall">
         <p class="htp-text">
           Here, the <span class="htp-highlight-orange">4</span> will explode when we make
           the stack <strong>4</strong> discs <em>tall</em>. No other discs will explode in this case.
@@ -133,7 +133,7 @@
         Here, the <span class="htp-highlight-red">3</span> will explode when we make
         the row <strong>3</strong> discs <em>wide</em>.
       </p>
-      <img class="htp-img-center reveal" src="assets/explode-3.png" alt="Row example — a 3 explodes when the row is 3 wide">
+      <img class="htp-img-center reveal" src="/assets/explode-3.png" alt="Row example — a 3 explodes when the row is 3 wide">
 
       <div class="htp-divider"></div>
 
@@ -147,7 +147,7 @@
 
       <!-- 4s-and-stone example: text left, image right -->
       <div class="htp-row img-right reveal">
-        <img src="assets/explode-4s-and-stone.png" alt="Stone cracking example">
+        <img src="/assets/explode-4s-and-stone.png" alt="Stone cracking example">
         <p class="htp-text">
           When this stack becomes <strong>4</strong> high, <em>both</em> 4s explode,
           <em>and</em> the adjacent stone at the bottom also explodes, revealing a numbered disc.
@@ -158,7 +158,7 @@
 
       <!-- Surge / buried disc: image left, text right -->
       <div class="htp-row img-left reveal">
-        <img src="assets/drop-7.png" alt="Chain reaction surge example">
+        <img src="/assets/drop-7.png" alt="Chain reaction surge example">
         <p class="htp-text">
           When a "buried" disc explodes, others drop to fill its space, often causing
           a chain reaction ("<span class="htp-highlight-yellow">surge</span>").
@@ -178,7 +178,7 @@
       <p class="htp-text reveal">
         Careful: Every <strong>5</strong> discs, another fresh row of stones will rise from the bottom!
       </p>
-      <img class="htp-img-wide reveal" src="assets/drop-row.png" alt="Row rise mechanic">
+      <img class="htp-img-wide reveal" src="/assets/drop-row.png" alt="Row rise mechanic">
 
       <div class="htp-divider"></div>
 
@@ -196,7 +196,7 @@
     <div class="container">
       <p class="s7-page-hero__eyebrow reveal">Ready to Spark?</p>
       <div class="s7-cta-row reveal" data-delay="100">
-        <a href="index.html" class="s7-btn s7-btn--primary">Download Now</a>
+        <a href="/" class="s7-btn s7-btn--primary">Download Now</a>
       </div>
     </div>
   </section>
@@ -206,10 +206,10 @@
 <div id="s7-footer-placeholder"></div>
 
 <script type="module">
-  import { autoInitNeuronCanvases } from './js/neuron-canvas.js';
-  import { initNav }                from './js/nav.js';
-  import { initScrollReveal }       from './js/scroll-reveal.js';
-  import { injectPartials }         from './js/partials.js';
+  import { autoInitNeuronCanvases } from '/js/neuron-canvas.js';
+  import { initNav }                from '/js/nav.js';
+  import { initScrollReveal }       from '/js/scroll-reveal.js';
+  import { injectPartials }         from '/js/partials.js';
   injectPartials();
   initNav();
   autoInitNeuronCanvases();

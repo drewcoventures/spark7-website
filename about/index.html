@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
   <title>About Spark7, your favorite chain reaction puzzle game</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/buttons.css">
-  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="stylesheet" href="/css/pages.css">
 </head>
 <body>
 <canvas class="neuron-canvas" data-neuron-canvas data-node-count="50" data-pulse-color="#ff0000" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;"></canvas>
@@ -29,7 +29,7 @@
   <section class="section">
     <div class="container" style="max-width:720px;">
 
-      <img src="assets/andrew-cohen.jpg" alt="Andrew Cohen" class="reveal" style="float:left;width:240px;max-width:40vw;height:auto;border-radius:12px;margin:0 24px 16px 0;border:2px solid rgba(36,189,216,0.4);">
+      <img src="/assets/andrew-cohen.jpg" alt="Andrew Cohen" class="reveal" style="float:left;width:240px;max-width:40vw;height:auto;border-radius:12px;margin:0 24px 16px 0;border:2px solid rgba(36,189,216,0.4);">
 
       <div class="reveal" style="font-family:var(--font-body);font-size:14px;color:rgba(255,255,255,0.82);line-height:2;letter-spacing:0.03em;">
         <p>Hi! I'm Andrew. My full-time job is as the founder of <a href="https://bscp.app/spark7" style="color:var(--s7-cyan);text-decoration:underline;">Brainscape</a>, the world's most effective flashcard app. (Here's <a href="https://www.linkedin.com/in/acohenNY" style="color:var(--s7-cyan);text-decoration:underline;">my LinkedIn</a> if you'd like to follow.)</p>
@@ -44,7 +44,7 @@
 
         <p style="margin-top:24px;">The result is a beautiful, satisfying game that blends aspects of Tetris, Dr. Mario, CandyCrush, and Sudoku into a super simple yet deceptively rich gameplay experience.</p>
 
-        <p style="margin-top:24px;">Many people even say that Spark7 makes you smarter the more you play it. (Check out the <a href="brain-benefits.html" style="color:var(--s7-cyan);text-decoration:underline;">brain benefits</a>.) You'll see what I mean after you've gone a few rounds. I hope you have fun with my creation!</p>
+        <p style="margin-top:24px;">Many people even say that Spark7 makes you smarter the more you play it. (Check out the <a href="/brain-benefits" style="color:var(--s7-cyan);text-decoration:underline;">brain benefits</a>.) You'll see what I mean after you've gone a few rounds. I hope you have fun with my creation!</p>
       </div>
 
     </div>
@@ -53,20 +53,20 @@
   <div style="padding:36px 40px 100px;text-align:center;">
     <p style="font-family:var(--font-heading);font-size:10px;letter-spacing:0.3em;color:rgba(255,255,255,0.28);text-transform:uppercase;margin-bottom:28px;">Explore Spark7</p>
     <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:860px;margin-inline:auto;">
-      <a href="how-to-play.html"    class="s7-btn s7-btn--primary reveal" data-delay="0">How to Play</a>
-      <a href="tips.html"           class="s7-btn s7-btn--purple  reveal" data-delay="60">Tips</a>
-      <a href="brain-benefits.html" class="s7-btn s7-btn--green   reveal" data-delay="120">Brain Benefits</a>
-      <a href="contact.html"        class="s7-btn s7-btn--rose    reveal" data-delay="180">Contact</a>
+      <a href="/how-to-play"    class="s7-btn s7-btn--primary reveal" data-delay="0">How to Play</a>
+      <a href="/tips"           class="s7-btn s7-btn--purple  reveal" data-delay="60">Tips</a>
+      <a href="/brain-benefits" class="s7-btn s7-btn--green   reveal" data-delay="120">Brain Benefits</a>
+      <a href="/contact"        class="s7-btn s7-btn--rose    reveal" data-delay="180">Contact</a>
     </div>
   </div>
 
 </div>
 <div id="s7-footer-placeholder"></div>
 <script type="module">
-  import { autoInitNeuronCanvases } from './js/neuron-canvas.js';
-  import { initNav }                from './js/nav.js';
-  import { initScrollReveal }       from './js/scroll-reveal.js';
-  import { injectPartials }         from './js/partials.js';
+  import { autoInitNeuronCanvases } from '/js/neuron-canvas.js';
+  import { initNav }                from '/js/nav.js';
+  import { initScrollReveal }       from '/js/scroll-reveal.js';
+  import { injectPartials }         from '/js/partials.js';
   injectPartials(); initNav(); autoInitNeuronCanvases(); initScrollReveal();
 </script>
 </body>

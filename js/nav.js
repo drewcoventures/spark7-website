@@ -15,9 +15,9 @@ export function initNav() {
   const links    = document.querySelectorAll('.s7-nav__link');
 
   // ── Active link from URL ──
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
   links.forEach(link => {
-    const href = link.getAttribute('href')?.split('/').pop() || '';
+    const href = (link.getAttribute('href') || '/').replace(/\/$/, '') || '/';
     if (href === currentPath) link.classList.add('active');
   });
 
