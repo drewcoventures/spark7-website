@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <title>Credits — Spark7</title>
+  <meta name="description" content="The talented people and resources behind Spark7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="stylesheet" href="/css/pages.css">
+
+  <style>
+    .credits-section {
+      margin-bottom: 56px;
+    }
+    .credits-section:last-child {
+      margin-bottom: 0;
+    }
+    .credits-label {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--s7-cyan);
+      margin-bottom: 20px;
+    }
+    .credits-entry {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255,255,255,0.82);
+      line-height: 2;
+      letter-spacing: 0.03em;
+    }
+    .credits-entry strong {
+      color: rgba(255,255,255,0.95);
+      font-weight: 600;
+    }
+    .credits-entry a {
+      color: var(--s7-cyan);
+      text-decoration: underline;
+    }
+    .credits-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(36,189,216,0.22), transparent);
+      margin: 0 0 56px;
+    }
+  </style>
+</head>
+<body>
+<canvas class="neuron-canvas" data-neuron-canvas data-node-count="50" data-pulse-color="#7d4dad" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;"></canvas>
+<div id="s7-nav-placeholder"></div>
+<div class="page-wrapper">
+
+  <div class="s7-page-hero">
+    <p class="s7-page-hero__eyebrow">Thank You</p>
+    <h1 class="s7-page-hero__title"><span class="accent">Credits</span></h1>
+    <p class="s7-page-hero__sub">Spark7 wouldn't exist without these talented people and resources.</p>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+
+      <div class="credits-section reveal">
+        <p class="credits-label">Music</p>
+        <div class="credits-entry">
+          <p><strong>Game Background</strong><br>Crystal Cave by cynicmusic, OpenGameArt.org</p>
+          <p style="margin-top:12px;"><strong>Tutorial</strong><br>Magic Space by CodeManu, OpenGameArt.org</p>
+        </div>
+      </div>
+
+      <div class="credits-divider"></div>
+
+      <div class="credits-section reveal" data-delay="60">
+        <p class="credits-label">Sound Effects</p>
+        <div class="credits-entry">
+          <p>Freesound.org</p>
+          <p>Chris Marks</p>
+        </div>
+      </div>
+
+      <div class="credits-divider"></div>
+
+      <div class="credits-section reveal" data-delay="120">
+        <p class="credits-label">Designers</p>
+        <div class="credits-entry">
+          <p>Rodolphe Renaudineau</p>
+          <p>Hamza Sajid</p>
+        </div>
+      </div>
+
+      <div class="credits-divider"></div>
+
+      <div class="credits-section reveal" data-delay="180">
+        <p class="credits-label">Key Beta Testers</p>
+        <div class="credits-entry">
+          <p>Mike, Steve, John, Jonathan, Jeff, Jeff, and Jeff (yes, 3 Jeffs!)</p>
+        </div>
+      </div>
+
+      <div class="credits-divider"></div>
+
+      <div class="credits-section reveal" data-delay="240">
+        <p class="credits-label">Moral Support</p>
+        <div class="credits-entry">
+          <p>Adrienne</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div style="padding:36px 40px 100px;text-align:center;">
+    <p style="font-family:var(--font-heading);font-size:10px;letter-spacing:0.3em;color:rgba(255,255,255,0.28);text-transform:uppercase;margin-bottom:28px;">Explore Spark7</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:860px;margin-inline:auto;">
+      <a href="/about"          class="s7-btn s7-btn--primary reveal" data-delay="0">About</a>
+      <a href="/how-to-play"    class="s7-btn s7-btn--purple  reveal" data-delay="60">How to Play</a>
+      <a href="/brain-benefits" class="s7-btn s7-btn--green   reveal" data-delay="120">Brain Benefits</a>
+      <a href="/contact"        class="s7-btn s7-btn--rose    reveal" data-delay="180">Contact</a>
+    </div>
+  </div>
+
+</div>
+<div id="s7-footer-placeholder"></div>
+<script type="module">
+  import { autoInitNeuronCanvases } from '/js/neuron-canvas.js';
+  import { initNav }                from '/js/nav.js';
+  import { initScrollReveal }       from '/js/scroll-reveal.js';
+  import { injectPartials }         from '/js/partials.js';
+  injectPartials(); initNav(); autoInitNeuronCanvases(); initScrollReveal();
+</script>
+</body>
+</html>

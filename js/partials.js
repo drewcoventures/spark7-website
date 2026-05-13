@@ -51,6 +51,7 @@ const FOOTER_HTML = /* html */`
         <li><a href="/brain-benefits">Brain Benefits</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/credits">Credits</a></li>
       </ul>
       <p class="s7-footer__copy">&copy; 2025 Spark7. All rights reserved.</p>
     </div>
