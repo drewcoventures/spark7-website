@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- GA4 — page_view beacon must complete before redirect -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7FB7RTGCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7FB7RTGCS', { send_page_view: false });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark7 — From the makers of Brainscape</title>
+  <meta name="description" content="Download Spark7 for iOS or Android">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <!-- Fallback for no-JS or if redirect stalls -->
+  <meta http-equiv="refresh" content="3;url=/">
+</head>
+<body>
+  <script>
+    (function() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var dest;
+      if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+        dest = 'https://apps.apple.com/app/id6759691707';
+      } else if (/android/i.test(ua)) {
+        dest = 'https://play.google.com/store/apps/details?id=com.drewcoventures.spark7';
+      } else {
+        dest = '/';
+      }
+      var redirected = false;
+      function go() {
+        if (!redirected) { redirected = true; window.location.replace(dest); }
+      }
+      gtag('event', 'page_view', {
+        page_location: window.location.href,
+        event_callback: go
+      });
+      setTimeout(go, 1500);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="3;url=/"></noscript>
+</body>
+</html>
