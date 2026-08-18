@@ -106,6 +106,21 @@
     }
     .tips-link:hover { color: #6dd9ee; }
 
+    /* Portrait video embed */
+    .tip__video-portrait {
+      display: flex;
+      justify-content: center;
+      margin: 24px auto;
+      clear: both;
+    }
+    .tip__video-portrait iframe {
+      width: 280px;
+      height: 498px;
+      border-radius: 14px;
+      border: 2px solid rgba(125, 77, 173, 0.45);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
     /* Mobile: drop the floats, let everything stack full-width */
     @media (max-width: 600px) {
       .tip__img--float-left,
@@ -270,6 +285,14 @@
           adaptability, and emotional regulation. Keep pushing yourself!
           [See other <a class="tips-link" href="/brain-benefits">brain benefits of Spark7</a>.]
         </p>
+      </article>
+
+      <!-- Video -->
+      <article class="tip reveal">
+        <h2 class="tip__title">Watch a pro player's game</h2>
+        <div class="tip__video-portrait">
+          <iframe src="https://www.youtube.com/embed/UWMDSOY3-4A" title="Spark7 gameplay video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </article>
 
     </div>
